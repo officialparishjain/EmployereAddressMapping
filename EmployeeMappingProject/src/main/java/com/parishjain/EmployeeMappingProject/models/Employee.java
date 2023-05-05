@@ -22,7 +22,7 @@ public class Employee {
     private String empLastName;
 
     // One to One Mapping
-    // One Employee can have many addresses
+    
 
 
     @OneToOne(cascade = CascadeType.ALL)
