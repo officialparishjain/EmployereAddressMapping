@@ -10,6 +10,7 @@ Employee Address Mapping
 The following functions are used in the data flow of this project:
 
 _**Models:**_
+
 The Employee and Address classes are model classes that represent entities in the Employee Mapping Project. The Employee class has three instance variables representing an employee's id, first name, and last name. Additionally, it has a OneToOne relationship with the Address entity, represented by the "address" instance variable. The Address class, on the other hand, has instance variables representing the address's id, street, city, state, and zipcode.
 
 Both classes use Lombok's annotations to generate constructors and getter/setter methods for their instance variables. Additionally, both classes are annotated with @Entity and @Table annotations, which indicate that these classes are JPA entities and are mapped to database tables.
@@ -20,7 +21,9 @@ In the Address class, there is no reference to the Employee entity, indicating t
 
 
 _**Controller:**_ 
+
 **EmployeeController:**
+
 The EmployeeController is a Spring MVC controller responsible for handling requests related to employees. 
 It has five methods that map to different HTTP methods and endpoints. 
 The first method, getAllEmployee(), uses the GET method to retrieve all employees. 
@@ -31,6 +34,7 @@ The fourth method, deleteEmployeeById(), uses the DELETE method to delete an emp
 
 
 **AddressController:**
+
 The AddressController is a Spring MVC controller responsible for handling requests related to addresses. It has four methods that map to different HTTP methods and endpoints. 
 The first method, getAllAddress(), uses the GET method to retrieve all addresses. 
 The second method, getAddressById(), also uses the GET method but takes an id parameter to retrieve a specific address. 
@@ -40,7 +44,9 @@ Finally, the deleteAddressById() method uses the DELETE method to delete an addr
 
 
 _**Services**:_ 
+
 **EmployeeService**
+
 fetchAllEmployee(): returns all employees in the database as an Iterable.
 fetchEmployeeById(Long id): returns the employee with the given id.
 saveEmployee(Employee employee): saves the given employee in the database and returns a message indicating success.
@@ -48,6 +54,7 @@ deleteEmployeeById(Long id): deletes the employee with the given id from the dat
 updateEmployeeById(Long id, String lastName): updates the last name of the employee with the given id and returns a message indicating success or failure.
 
 **AddressService**
+
 The class is annotated with @Service, indicating that it is a Spring service component.
 It has an instance variable of type IAddressRepository, which is used to access the database.
 fetchAllAddress() method returns all the addresses in the database.
